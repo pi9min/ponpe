@@ -1,0 +1,8 @@
+= paginator.render do
+  ul.pagination
+    == first_page_tag
+    == prev_page_tag
+    li.disabled.current
+      span = current_page
+    == next_page_tag
+    == last_page_tag

@@ -1,0 +1,19 @@
+doctype html
+html[lang="ja"]
+  head
+    title = ENV['service_title']
+    meta[content="width=device-width, initial-scale=1" name="viewport"]
+    = stylesheet_link_tag 'application', media: 'all'
+    = javascript_include_tag 'application'
+    = csrf_meta_tags
+  body.fixed-bg
+    - if current_user
+      - if User.allowed_users.include?(current_user.permission)
+        = render 'layouts/navbar'
+        .overlay-search
+        == yield
+      - else
+        = render 'layouts/navbar'
+        = render 'layouts/guest'
+    - else
+      = render 'layouts/login'

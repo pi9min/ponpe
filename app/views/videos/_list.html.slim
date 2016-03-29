@@ -1,0 +1,20 @@
+.video-list-container
+  - videos.each do |video|
+    a href='#{watch_path video.short_url}'
+      article.video-container
+        .video-thumbnail-container
+          == image_tag video.thumbnail_small_url(width: 192), alt: video.title, class: 'video-thumbnail'
+          span.video-duration
+            = video.duration_sec
+          span class="video-sticky-#{video.category} video-sticky-t-#{video.category}"
+            = video.category_i18n
+          - if video.archived?
+            span class="video-sticky-archived"
+              i.material-icons cloud_queue
+        .video-title-container
+          h1.video-title.line-clamp-2
+            = video.title
+          p.video-description.line-clamp
+            = video.subtitle
+          p.video-date
+            = video.recorded_at_txt

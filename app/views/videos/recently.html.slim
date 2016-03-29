@@ -1,0 +1,6 @@
+.container.container-dark
+  .main-container
+    h1.title = @title
+    p.video-count = " Total: #{@total}, Published: #{@published}, Archived: #{@archived}"
+    = render partial: 'videos/list', locals: { videos: @videos }
+    = paginate @videos

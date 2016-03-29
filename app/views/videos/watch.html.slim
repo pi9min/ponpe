@@ -1,0 +1,32 @@
+.container.container-dark
+  .main-container
+    .box
+      .embed-responsive
+        video[controls id="#{@video.short_url}" class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9" preload="metadata" poster="#{@video.thumbnail_url}" data-setup='{"playbackRates": [1, 1.5, 2]}']
+          source[src="#{@video.short_time_url}" type="video/mp4"]
+    .box
+      h1 = @video.title
+      h3 = @video.subtitle
+    .box.box-horizontal
+      .state-block
+        h1 状態
+        p[class="label-#{@video.state}"] = @video.state_i18n
+      .state-block
+        h1 ジャンル
+        p[class="color-#{@video.category}"] = @video.category_i18n
+      .state-block
+        h1 放送時間
+        p = @video.recorded_at.strftime '%Y/%m/%d %H:%M'
+    .box.box-horizontal
+      = link_to @video.download_url, class: 'btn btn-block'
+        i.material-icons get_app
+      .btn.btn-block
+        i.material-icons link
+      .btn.btn-block
+        i.material-icons cloud_download
+      = link_to @video.line_share_text, class: 'btn btn-block'
+        span.icon-line
+    - unless @videos.count == 0
+      .box
+        h3 関連動画一覧
+        = render partial: 'videos/list', locals: { videos: @videos }

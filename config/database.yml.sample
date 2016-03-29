@@ -1,0 +1,19 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: <%= ENV['database_username'] %>
+  password: <%= ENV['database_password'] %>
+  socket: /tmp/mysql.sock
+
+development:
+  <<: *default
+  database: ponpe_dev
+
+test:
+  <<: *default
+  database: ponpe_test
+
+production:
+  <<: *default
+  database: ponpe

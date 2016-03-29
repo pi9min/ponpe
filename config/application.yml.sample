@@ -1,0 +1,17 @@
+# common settings
+service_title: Ponpe
+
+# google oauth2
+google_oauth2_key: keykeykeykeykey
+google_oauth2_secret: secretsecretsecretsecretsecretsecret
+
+# secrets.yml
+secret_key_base: your_secret_key_base
+
+# asset server用のsalt
+# ショートタイムURLを発行する際に使用します
+asset_server_salt: 0123456789
+
+# db settings
+database_username: root
+database_password: password

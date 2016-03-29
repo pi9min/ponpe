@@ -1,0 +1,18 @@
+nav.navbar.navbar-fixed-top
+  .container
+    = link_to 'Ponpe', root_path, class: 'navbar-brand'
+    .navbar-search
+      = form_tag '/search', { method: 'get', class: 'navbar-search-form', enforce_utf8: false }
+        = text_field_tag :q, '', placeholder: 'Title...', class: 'navbar-search-form-input'
+      i.material-icons.navbar-search-icon search
+  .container
+    .submenu
+      == link_to 'アニメ', category_path(category: 'anime'), class: 'menu-item menu-item-anime'
+      == link_to '音楽', category_path(category: 'music'), class: 'menu-item menu-item-music'
+      == link_to 'バラエティ', category_path(category: 'variety'), class: 'menu-item menu-item-variety'
+      == link_to 'ドラマ', category_path(category: 'drama'), class: 'menu-item menu-item-drama'
+      == link_to '映画', category_path(category: 'cinema'), class: 'menu-item menu-item-cinema'
+      == link_to 'スポーツ', category_path(category: 'sports'), class: 'menu-item menu-item-sports'
+      == link_to '情報', category_path(category: 'information'), class: 'menu-item menu-item-information'
+      == link_to 'ニュース', category_path(category: 'news'), class: 'menu-item menu-item-news'
+      == link_to 'その他', category_path(category: 'etc'), class: 'menu-item menu-item-etc'

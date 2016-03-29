@@ -1,0 +1,34 @@
+ja:
+  helpers:
+    page_entries_info:
+      more_pages:
+        display_entries: "<b>%{total}</b>中の%{entry_name}を表示しています <b>%{first} - %{last}</b>"
+      one_page:
+        display_entries:
+          one: "<b>%{count}</b>レコード表示中です %{entry_name}"
+          other: "<b>%{count}</b>レコード表示中です %{entry_name}"
+          zero: "レコードが見つかりませんでした %{entry_name}"
+  views:
+    pagination:
+      first: "&laquo;"
+      last: "&raquo;"
+      next: "&rsaquo;"
+      previous: "&lsaquo;"
+      truncate: "&hellip;"
+  enums:
+    video:
+      category:
+        unknown: 不明
+        anime: アニメ
+        music: 音楽
+        variety: バラエティ
+        drama: ドラマ
+        cinema: 映画
+        sports: スポーツ
+        information: 情報
+        news: ニュース
+        etc: その他
+      state:
+        registered: 登録
+        published: 公開
+        archived: アーカイブ
