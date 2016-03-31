@@ -1,6 +1,8 @@
 Ponpe
 =======
 
+[![Code Climate](https://codeclimate.com/github/pi9min/ponpe/badges/gpa.svg)](https://codeclimate.com/github/pi9min/ponpe)
+
 お腹が痛くてもアニメは見たい。Ponpe(ポンペ)はそんなあなたのための個人向け動画管理アプリケーションです。
 
 # Requirements
