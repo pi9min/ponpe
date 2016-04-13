@@ -29,7 +29,7 @@ end
 
 # auth
 gem 'omniauth'
-gem 'omniauth-oauth2', '~> 1.3.1'
+gem 'omniauth-oauth2', '~> 1.4'
 gem 'omniauth-google-oauth2'
 
 # pagination
