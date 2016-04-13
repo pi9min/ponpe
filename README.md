@@ -1,7 +1,9 @@
 Ponpe
 =======
 
+[![Dependency Status](https://gemnasium.com/badges/github.com/pi9min/ponpe.svg)](https://gemnasium.com/github.com/pi9min/ponpe)
 [![Code Climate](https://codeclimate.com/github/pi9min/ponpe/badges/gpa.svg)](https://codeclimate.com/github/pi9min/ponpe)
+[![security](https://hakiri.io/github/pi9min/ponpe/master.svg)](https://hakiri.io/github/pi9min/ponpe/master)
 
 お腹が痛くてもアニメは見たい。Ponpe(ポンペ)はそんなあなたのための個人向け動画管理アプリケーションです。
 
