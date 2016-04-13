@@ -31,15 +31,6 @@ class VideosController < ApplicationController
     @videos = Video.where(title: @video.title).where.not(short_url: @video.short_url).order(recorded_at: :desc).limit(30)
   end
 
-  def download
-    @video = Video.find_by_short_url(params[:short_url])
-    filename = @video.title
-    filename << (' #' + @video.chapter) unless @video.chapter.blank?
-    filename << (' ' + @video.description) unless @video.description.blank?
-    filename << '.mp4'
-    send_file @video.url, filename: filename
-  end
-
   def category
     page = params.key?(:page) ? params[:page] : 0
     category = params.key?(:category) ? params[:category] : Video.categories[:unknown]
