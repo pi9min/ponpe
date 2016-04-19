@@ -16,6 +16,7 @@ gem 'activerecord-mysql-awesome'
 gem 'terminal-table', require: false
 gem 'figaro'
 gem 'enum_help'
+gem 'meta-tags'
 
 group :development, :test do
   gem 'byebug'

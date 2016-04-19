@@ -32,3 +32,7 @@ ja:
         registered: 登録
         published: 公開
         archived: アーカイブ
+  meta_tags:
+    base:
+      site: <%= ENV['service_title'] %>
+      description: "お腹が痛い人でもアニメを楽しめる動画管理アプリケーション"

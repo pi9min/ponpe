@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
   before_action :store_location
   helper_method :current_user
 
+  include MetaTaggable
+
   private
 
   def current_user
