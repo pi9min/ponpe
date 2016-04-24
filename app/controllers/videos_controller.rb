@@ -37,7 +37,7 @@ class VideosController < ApplicationController
 
     videos = Video.where(category: Video.categories[category.to_sym]).order(recorded_at: :desc)
 
-    @title = t("videos.categories.#{category}")
+    @title = t("enums.video.category.#{category}")
     @total = videos.count
     @published = videos.published.count
     @archived = videos.archived.count
