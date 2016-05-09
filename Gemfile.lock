@@ -20,7 +20,7 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 1.0, >= 1.0.5)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    active_decorator (0.7.0)
+    active_decorator (0.7.1)
     activejob (4.2.6)
       activesupport (= 4.2.6)
       globalid (>= 0.3.0)
@@ -45,11 +45,9 @@ GEM
       activerecord (>= 3.2, < 6.0)
       rake (~> 10.4)
     arel (6.0.3)
-    binding_of_caller (0.7.2)
-      debug_inspector (>= 0.0.1)
     builder (3.2.2)
-    byebug (8.2.4)
-    concurrent-ruby (1.0.1)
+    byebug (8.2.5)
+    concurrent-ruby (1.0.2)
     debug_inspector (0.0.2)
     enum_help (0.0.15)
     erubis (2.7.0)
@@ -60,7 +58,7 @@ GEM
       thor (~> 0.14)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
-    hashie (3.4.3)
+    hashie (3.4.4)
     hpricot (0.8.6)
     html2slim (0.2.0)
       hpricot
@@ -78,7 +76,7 @@ GEM
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     kgio (2.10.0)
-    libv8 (3.16.14.13)
+    libv8 (3.16.14.15)
     loofah (2.0.3)
       nokogiri (>= 1.5.9)
     mail (2.6.4)
@@ -90,10 +88,10 @@ GEM
     mime-types-data (3.2016.0221)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
-    multi_json (1.11.2)
+    multi_json (1.12.0)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    mysql2 (0.4.3)
+    mysql2 (0.4.4)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     oauth2 (1.0.0)
@@ -187,11 +185,10 @@ GEM
     unicorn (5.1.0)
       kgio (~> 2.6)
       raindrops (~> 0.7)
-    web-console (2.3.0)
-      activemodel (>= 4.0)
-      binding_of_caller (>= 0.7.2)
-      railties (>= 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
+    web-console (3.1.1)
+      activemodel (>= 4.2)
+      debug_inspector
+      railties (>= 4.2)
 
 PLATFORMS
   ruby
@@ -221,7 +218,7 @@ DEPENDENCIES
   therubyracer
   uglifier (>= 1.3.0)
   unicorn
-  web-console (~> 2.0)
+  web-console (~> 3.0)
 
 BUNDLED WITH
    1.11.2
