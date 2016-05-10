@@ -3,7 +3,7 @@
 
 $(function(){
   "use strict";
-  $('.navbar-search-icon, .overlay-search').on('click', function(){
+  $('#search-icon, .overlay-search').on('click', function(){
     $('.navbar-search-form').toggle();
     $('.overlay-search').toggle();
     if ($('.navbar-search-form').is(':visible')) {

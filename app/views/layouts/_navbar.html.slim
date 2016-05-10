@@ -4,7 +4,8 @@ nav.navbar.navbar-fixed-top
     .navbar-search
       = form_tag '/search', { method: 'get', class: 'navbar-search-form', enforce_utf8: false }
         = text_field_tag :q, '', placeholder: 'Title...', class: 'navbar-search-form-input'
-      i.material-icons.navbar-search-icon search
+      i#search-icon.material-icons.navbar-icon.navbar-search-icon search
+      i.material-icons.navbar-icon.navbar-search-icon more_vert
   .container
     .submenu
       == link_to 'アニメ', category_path(category: 'anime'), class: 'menu-item menu-item-anime'
