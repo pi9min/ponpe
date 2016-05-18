@@ -432,20 +432,6 @@ a {
   padding: .2rem .7rem;
 }
 
-.line-clamp {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.line-clamp-2 {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-}
-
 // video parts
 .video-thumbnail {
   width: 100%;
@@ -519,10 +505,12 @@ a {
   font-size: .6rem;
   font-weight: 100;
   line-height: .8rem;
+  height: 1rem;
 }
 
 .video-title {
   font-size: .8rem;
+  height: 2.5rem;
 }
 
 .video-date {
@@ -646,11 +634,6 @@ a {
     position: relative;
     text-align: right;
     margin: .0625rem 0;
-  }
-
-  .line-clamp-2 {
-    display: block;
-    white-space: nowrap;
   }
 
   @each $category in $category-list {

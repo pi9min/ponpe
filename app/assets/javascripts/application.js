@@ -1,4 +1,5 @@
 //= require jquery2
+//= require vendor/jquery.dotdotdot.min
 //= require vendor/video.min
 
 $(function(){
@@ -16,5 +17,11 @@ $(function(){
       $('.navbar-search-form').toggle();
       $('.overlay-search').toggle();
     }
+  });
+
+  $(document).ready(function(){
+    $('.video-title, .video-description').dotdotdot({
+      wrap: 'letter',
+    });
   });
 });
