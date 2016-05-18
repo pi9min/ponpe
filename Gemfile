@@ -7,7 +7,6 @@ gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'annotate'
 gem 'slim-rails'
 gem 'therubyracer'
 gem 'active_decorator'
@@ -24,6 +23,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'annotate'
   gem 'web-console', '~> 3.0'
   gem 'spring'
 end
