@@ -8,4 +8,10 @@ Rails.application.routes.draw do
   get '/auth/:provider/callback', to: 'sessions#callback'
   get '/auth/failure', to: 'sessions#failure'
   get '/logout', to: 'sessions#destroy', as: :logout
+  # api
+  namespace :api, defaults: {format: :json} do
+    namespace :v1 do
+      get '/videos', to: 'videos#all'
+    end
+  end
 end
