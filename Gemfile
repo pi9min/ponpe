@@ -38,3 +38,6 @@ gem 'kaminari'
 
 # server
 gem 'unicorn'
+
+# admin tool
+gem 'rails_admin'

@@ -14,4 +14,6 @@ Rails.application.routes.draw do
       get '/videos', to: 'videos#all'
     end
   end
+  # admin
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 end
