@@ -1,6 +1,5 @@
 //= require jquery2
 //= require vendor/jquery.dotdotdot.min
-//= require vendor/video.min
 
 $(function(){
   "use strict";

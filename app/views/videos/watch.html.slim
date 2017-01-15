@@ -3,7 +3,7 @@
   .main-container
     .box
       .embed-responsive
-        video[controls id="#{@video.short_url}" class="video-js vjs-default-skin vjs-big-play-centered vjs-16-9" preload="metadata" poster="#{@video.thumbnail_url}" data-setup='{"playbackRates": [1, 1.5, 2]}']
+        video[controls id="#{@video.short_url}" preload="metadata" poster="#{@video.thumbnail_url}"]
           source[src="#{@video.short_time_url}" type="video/mp4"]
     .box
       h1 = @video.title
