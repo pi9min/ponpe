@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root to: 'videos#recently'
   get '/search', to: 'videos#search'
   get '/videos/:short_url', to: 'videos#watch', as: :watch
