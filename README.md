@@ -1,7 +1,6 @@
 Ponpe
 =======
 
-[![Dependency Status](https://gemnasium.com/badges/github.com/pi9min/ponpe.svg)](https://gemnasium.com/github.com/pi9min/ponpe)
 [![Code Climate](https://codeclimate.com/github/pi9min/ponpe/badges/gpa.svg)](https://codeclimate.com/github/pi9min/ponpe)
 [![security](https://hakiri.io/github/pi9min/ponpe/master.svg)](https://hakiri.io/github/pi9min/ponpe/master)
 
