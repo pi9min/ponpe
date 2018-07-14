@@ -32,12 +32,17 @@ class Video < ActiveRecord::Base
     sports: 5,
     information: 6,
     news: 7,
-    etc: 8
+    etc: 8,
+    documentary: 9,
+    theater: 10,
+    hobby: 11,
+    welfare: 12
   }
 
   enum state: {
     registered: 0,
     published: 1,
-    archived: 2
+    archived: 2,
+    restored: 3
   }
 end

@@ -72,8 +72,8 @@ $root-font-family: 'Noto Sans', 'Noto Sans CJK JP', 'NotoSansCJKjp-Ponpe', sans-
 $logo-font-family: 'Dual-300';
 $icon-font-family: 'icomoon';
 
-$category-color-list: rgb(244, 67, 54), rgb(68, 138, 255), rgb(76, 175, 80), rgb(96, 125, 139), rgb(63, 81, 181), rgb(124, 77, 255), rgb(121, 85, 72), rgb(0, 188, 212), rgb(224, 64, 251);
-$category-list: anime, music, variety, drama, cinema, sports, information, news, etc;
+$category-color-list: rgb(244, 67, 54), rgb(68, 138, 255), rgb(76, 175, 80), rgb(96, 125, 139), rgb(63, 81, 181), rgb(124, 77, 255), rgb(121, 85, 72), rgb(0, 188, 212), rgb(224, 64, 251), rgb(224, 64, 251), rgb(224, 64, 251), rgb(224, 64, 251), rgb(224, 64, 251);
+$category-list: anime, music, variety, drama, cinema, sports, information, news, etc, documentary, theater, hobby, welfare;
 
 // base settings
 html {
@@ -453,6 +453,10 @@ a {
 
 .label-archived {
   color: nth($category-color-list, 4);
+}
+
+.label-restored {
+  color: rgb(85, 170, 85);
 }
 
 .video-sticky-archived {

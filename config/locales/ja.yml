@@ -28,10 +28,15 @@ ja:
         information: 情報
         news: ニュース
         etc: その他
+        documentary: ドキュメンタリー
+        theater: 劇場
+        hobby: 趣味
+        welfare: 福祉
       state:
         registered: 登録
         published: 公開
-        archived: アーカイブ
+        archived: アーカイブ済
+        restored: 一時復元中
   meta_tags:
     base:
       site: <%= ENV['service_title'] %>
