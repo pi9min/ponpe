@@ -75,6 +75,7 @@ $(function(){
       container.style.opacity = 0;
       container.style.transition = 'all 0.1s';
       container.style.position = 'absolute';
+      container.style.display = 'flex';
       container.style.top = 0;
       container.style.right = 0;
       container.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
