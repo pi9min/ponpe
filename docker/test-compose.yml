@@ -1,0 +1,13 @@
+# docker-compose just for testing
+version: '3'
+services:
+    # Test assets:precompile
+    assets_precompile:
+        environment:
+            - RAILS_ENV=production
+        build:
+            context: ../
+            dockerfile: ./docker/precompile.Dockerfile
+        volumes:
+            - ../app/assets:/ponpe/app/assets
+        
