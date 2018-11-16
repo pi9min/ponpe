@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -o errexit
+set -o verbose
+
+docker-compose -f ./docker/test-compose.yml run assets_precompile
