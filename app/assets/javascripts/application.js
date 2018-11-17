@@ -51,7 +51,7 @@ $(function(){
       button.style.bottom = '0';
       button.style.backgroundColor = 'transparent';
       button.style.border = 'none';
-      const icon = util.icon(doc, 'fullscreen', {color: 'white', fontSize: '4em'});
+      const icon = util.icon(doc, 'fullscreen', {color: 'white', fontSize: '3em'});
       button.addEventListener('click', () => this.toggle());
       button.appendChild(icon);
       return button;
@@ -85,13 +85,13 @@ $(function(){
     }
     _createRewindButton(doc) {
       const rewind = doc.createElement('div');
-      rewind.appendChild(util.icon(doc, 'replay_10', {color:'white',fontSize:'4em'}));
+      rewind.appendChild(util.icon(doc, 'replay_10', {color:'white',fontSize:'3em'}));
       rewind.addEventListener('click', () => this.rewind(10));
       return rewind;
     }
     _createForwardButton(doc) {
       const forward = doc.createElement('div');
-      forward.appendChild(util.icon(doc, 'forward_30', {color:'white',fontSize:'4em'}));
+      forward.appendChild(util.icon(doc, 'forward_30', {color:'white',fontSize:'3em'}));
       forward.addEventListener('click', () => this.forward(30));
       return forward;
     }
