@@ -41,7 +41,9 @@ $(function(){
       this.target.style.zIndex = '2000';
     }
     _createButton(doc) {
-      const button = doc.createElement('button');
+      const button = doc.createElement('span');
+      button.addEventListener('mouseenter', () => button.style.opacity = 1);
+      button.addEventListener('mouseleave', () => button.style.opacity = 0);
       button.className = this.className;
       button.style.position = 'fixed';
       button.style.zIndex = '2001';
