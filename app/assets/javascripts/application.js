@@ -118,9 +118,11 @@ $(function(){
       wrap: 'letter',
     });
 
-    const fullscreen = new CustomFullscreen(window.document);
-    document.body.appendChild(fullscreen.button);
-    const control = new CustomVideoControl(window.document);
-    document.querySelector('div.box>div.embed-responsive').appendChild(control.container);
+    if (/^\/videos\/[a-zA-Z0-9]+$/.test(location.pathname)) {
+      const fullscreen = new CustomFullscreen(window.document);
+      document.body.appendChild(fullscreen.button);
+      const control = new CustomVideoControl(window.document);
+      document.querySelector('div.box>div.embed-responsive').appendChild(control.container);
+    }
   });
 });
