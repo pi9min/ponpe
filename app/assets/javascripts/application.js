@@ -41,7 +41,9 @@ $(function(){
       this.target.style.zIndex = '2000';
     }
     _createButton(doc) {
-      const button = doc.createElement('button');
+      const button = doc.createElement('span');
+      button.addEventListener('mouseenter', () => button.style.opacity = 1);
+      button.addEventListener('mouseleave', () => button.style.opacity = 0);
       button.className = this.className;
       button.style.position = 'fixed';
       button.style.zIndex = '2001';
@@ -49,7 +51,7 @@ $(function(){
       button.style.bottom = '0';
       button.style.backgroundColor = 'transparent';
       button.style.border = 'none';
-      const icon = util.icon(doc, 'fullscreen', {color: 'white', fontSize: '4em'});
+      const icon = util.icon(doc, 'fullscreen', {color: 'white', fontSize: '3em'});
       button.addEventListener('click', () => this.toggle());
       button.appendChild(icon);
       return button;
@@ -75,6 +77,7 @@ $(function(){
       container.style.opacity = 0;
       container.style.transition = 'all 0.1s';
       container.style.position = 'absolute';
+      container.style.display = 'flex';
       container.style.top = 0;
       container.style.right = 0;
       container.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
@@ -82,13 +85,13 @@ $(function(){
     }
     _createRewindButton(doc) {
       const rewind = doc.createElement('div');
-      rewind.appendChild(util.icon(doc, 'replay_10', {color:'white',fontSize:'4em'}));
+      rewind.appendChild(util.icon(doc, 'replay_10', {color:'white',fontSize:'3em'}));
       rewind.addEventListener('click', () => this.rewind(10));
       return rewind;
     }
     _createForwardButton(doc) {
       const forward = doc.createElement('div');
-      forward.appendChild(util.icon(doc, 'forward_30', {color:'white',fontSize:'4em'}));
+      forward.appendChild(util.icon(doc, 'forward_30', {color:'white',fontSize:'3em'}));
       forward.addEventListener('click', () => this.forward(30));
       return forward;
     }
@@ -115,9 +118,11 @@ $(function(){
       wrap: 'letter',
     });
 
-    const fullscreen = new CustomFullscreen(window.document);
-    document.body.appendChild(fullscreen.button);
-    const control = new CustomVideoControl(window.document);
-    document.querySelector('div.box>div.embed-responsive').appendChild(control.container);
+    if (/^\/videos\/[a-zA-Z0-9]+$/.test(location.pathname)) {
+      const fullscreen = new CustomFullscreen(window.document);
+      document.body.appendChild(fullscreen.button);
+      const control = new CustomVideoControl(window.document);
+      document.querySelector('div.box>div.embed-responsive').appendChild(control.container);
+    }
   });
 });
