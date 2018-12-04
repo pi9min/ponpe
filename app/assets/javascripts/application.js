@@ -20,6 +20,7 @@ $(function(){
       this.className = 'custom-fullscreen';
       this.target = doc.querySelector('div.box>.embed-responsive');
       this.button = this._createButton(doc);
+      this.body = doc.body;
     }
     toggle() {
       if (this.target.classList.contains(this.className)) {
@@ -31,6 +32,7 @@ $(function(){
     _toDefault() {
       this.target.classList.remove(this.className);
       this.target.style = {};
+      this.body.style = {};
     }
     _toFullscreen() {
       this.target.classList.add(this.className);
@@ -39,6 +41,11 @@ $(function(){
       this.target.style.left = '0';
       this.target.style.width = '100%';
       this.target.style.zIndex = '2000';
+      this.target.style.top = '50%';
+      this.target.style.transform = 'translateY(-50%)';
+      this.target.style.visibility = 'visible';
+      this.body.style.visibility = 'hidden';
+      this.body.style.background = 'black';
     }
     _createButton(doc) {
       const button = doc.createElement('span');
@@ -51,6 +58,7 @@ $(function(){
       button.style.bottom = '0';
       button.style.backgroundColor = 'transparent';
       button.style.border = 'none';
+      button.style.visibility = 'visible';
       const icon = util.icon(doc, 'fullscreen', {color: 'white', fontSize: '3em'});
       button.addEventListener('click', () => this.toggle());
       button.appendChild(icon);
