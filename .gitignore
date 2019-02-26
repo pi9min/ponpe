@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io/api/rails
 
+# ruby versioning file
+.ruby-version
+
 ### Rails ###
 *.rbc
 capybara-*.html
@@ -41,3 +44,6 @@ bower.json
 
 # Ignore application configuration
 /config/application.yml
+
+# public assets
+/public/assets
