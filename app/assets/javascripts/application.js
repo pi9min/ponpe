@@ -21,6 +21,7 @@ $(function(){
       this.target = doc.querySelector('div.box>.embed-responsive');
       this.button = this._createButton(doc);
       this.body = doc.body;
+      this.style = doc.querySelector("style." + this.className) || _injectStyleIfNotExists(doc);
     }
     toggle() {
       if (this.target.classList.contains(this.className)) {
@@ -29,10 +30,17 @@ $(function(){
         this._toFullscreen();
       }
     }
+    _injectStyleIfNotExists(doc) {
+      const style = doc.createElement("style");
+      style.className = this.className;
+      doc.head.appendChild(style);
+      return style;
+    }
     _toDefault() {
       this.target.classList.remove(this.className);
       this.target.style = {};
       this.body.style = {};
+      this.style.innerText = '';
     }
     _toFullscreen() {
       this.target.classList.add(this.className);
@@ -46,6 +54,7 @@ $(function(){
       this.target.style.visibility = 'visible';
       this.body.style.visibility = 'hidden';
       this.body.style.background = 'black';
+      this.style.innerText = '::-webkit-scrollbar { display: none; }';
     }
     _createButton(doc) {
       const button = doc.createElement('span');
