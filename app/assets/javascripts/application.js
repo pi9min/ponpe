@@ -21,7 +21,7 @@ $(function(){
       this.target = doc.querySelector('div.box>.embed-responsive');
       this.button = this._createButton(doc);
       this.body = doc.body;
-      this.style = doc.querySelector("style." + this.className) || _injectStyleIfNotExists(doc);
+      this.style = doc.querySelector("style." + this.className) || this._injectStyleIfNotExists(doc);
     }
     toggle() {
       if (this.target.classList.contains(this.className)) {
